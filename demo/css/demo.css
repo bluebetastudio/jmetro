@@ -1,0 +1,184 @@
+@font-face {
+	font-family: SegoeUI2;
+	src: url(segoeui.ttf);
+}
+.donating {
+	position: absolute;
+right: 0px;
+margin-top: -21px;
+}
+footer {
+	padding: 15px;
+	color: white;
+	text-align: center;
+}
+footer a{
+	color: white;
+}
+a {
+	color: #0B8940;
+}
+html, * {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+.button {
+	padding: 10px;
+	background: #E37E52;
+	text-align: center;
+	border: 2px solid rgba(220,220,220,.3);
+}
+body {
+	font-family: SegoeUI2;
+	font-size: 13px;
+	margin: 0px;
+	padding: 0px;
+}
+.c {
+	display: table;
+	text-align: center;
+	margin: 0 auto;
+}
+
+@media all and (min-width: 750px) {
+	.c-2 {
+		display: inline-table;
+		width: 43%;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.c-2 {
+		display: inline-table;
+		width: 90%;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	footer, header {
+		text-align: left !important;
+	}
+}
+#content {
+	padding-top: 30px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-color: #027fb9;
+}
+header {
+	color: white;
+	background: #027fb9;
+	text-shadow: -1px 3px 5px rgba(0,0,0,.3);
+	padding: 15px;
+	text-align: center;
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	z-index: 99;
+}
+
+#content h1 {
+	color: white;
+	font-size: 85px;
+	text-shadow: -1px 1px 10px rgba(0,0,0,.8);
+	font-weight: normal;
+	text-align: center;
+	padding-top: 20px;
+	
+	padding-bottom: 150px;
+}
+.button-download {
+	box-shadow: 0 0 0 2px #26609a, 0 0 0 3px #2e69b4;
+	background: #2d68a9;
+	border-radius: 4px;
+	width: 150px;
+	padding: 5px;
+	color: white;
+}
+#demo1:hover, .css3button:hover {
+	background: rgba(255,255,255,.3);
+}
+#demo1:active, .css3button:active {
+	background: rgba(0,0,0,.3);
+}
+#demo1 {
+	border-radius: 100%;
+	border: 9px solid white;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	padding-right: 35px;
+	padding-left: 35px;
+	cursor: pointer;
+	-webkit-animation: myfirst 2s linear 2s infinite alternate;
+	animation: myfirst 2s linear 2s infinite alternate;
+}
+span.border {
+	border-radius: 100%;
+	border: 2px solid black;
+	padding-top: 0px;
+	padding-bottom: 3px;
+	padding-right: 16px;
+	padding-left: 16px;
+}
+.screen h1 {
+	font-size: 35px !important;
+	color: black !important;
+	text-align: left !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	padding: 20px !important;
+	padding-bottom: 0px !important;
+}
+ @keyframes myfirst {
+ 0% {
+background:transparent;
+}
+ 50% {
+background: rgba(255,255,255,.3);
+}
+ 100% {
+background:transparent;
+}
+}
+ @-webkit-keyframes myfirst {
+ 0% {
+background:transparent;
+}
+ 50% {
+background: rgba(255,255,255,.3);
+}
+ 100% {
+background:transparent;
+}
+}
+.sub {
+	font-size: 30px !important;
+}
+.css3button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	background: transparent;
+	padding: 10px 20px;
+	border: 1px solid white;
+	text-decoration: none;
+	cursor: pointer;
+}
+article .css3button {
+	border: 1px solid black;
+	color: black;
+}
+.screen {
+	width: 100%;
+	background: white;
+}
+.screen article {
+	padding: 15px;
+}
+#description-t {
+	position: absolute;
+	font-size: 15px;
+	margin-left: -147px;
+	margin-top: 23px;
+}

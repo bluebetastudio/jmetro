@@ -1,0 +1,79 @@
+<!doctype html><head>
+	<title>jMetro Window Test</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">	
+
+	<script src="demo/js/jquery.js"></script>
+	<script src="js/jmetro.js"></script>
+	<script src="demo/js/cpret.js"></script>
+	
+	<link href="css/jmetro.css" rel="stylesheet" />
+	<link href="demo/css/demo.css" rel="stylesheet" />	
+	<script src="demo/js/demo.js"></script>    
+</head>
+
+<body>
+	
+	<div id="content">
+		
+		<div class="screen">
+		
+			<h1 id="about" class="top-anchor"><span class="border">+</span> What is this plugin </h1>
+			
+			<article>
+				<div class="c">
+					<div class="c-2">
+						<p>This jQuery plugin was based on the <b>Windows 8/8.1 User Interface</b> (before: "Metro UI"),
+						   since there is <a href="http://metroui.org.ua/" rel="nofollow" target="_blank">some plugins</a> and CSS for block' styles similar to Start UI Interface, but 
+					nothing about the modal alert.</p>
+						<p>There is some usage examples on the folder "<a href="demo/index.html"><b>DEMO</b></a>", it includes how I made the MIT License' modal (the one you used for download this) and more.</p>				
+					</div>
+					<div class="c-2 btn">
+						<p>After download it, upload the files on your server and add the minified version of the JS and CSS plugin on your page. Include those lines after the jQuery call line:</p>					
+						<pre class="language-html" style="text-align: left;">	
+...				
+	&lt;script src="jmetro.min.js"&gt;&lt;/script&gt;
+	&lt;link href="jmetro.min.css" rel="stylesheet" /&gt;
+...
+						</pre>
+					</div>
+				</div>
+			</article>	
+			
+			<h1 id="howto" class="top-anchor"><span class="border">+</span> Just to start </h1>
+			
+			<article>
+				<div class="c">
+					<div class="c-2">
+						<p>For execute a simple alert modal, you just need to use that code,
+							when <a href="http://learn.jquery.com/using-jquery-core/document-ready/" target="_blank">the document is ready</a>.</p>
+						<pre class="language-javascript" style="text-align: left;">	
+$.jMetro(
+	"This is a title",
+	"This is a message base, just a simple base."
+);		
+						</pre>
+						<p>It will show a default blue window alert, with title, message/details and a OK button that only will hide the modal.</p><br>
+						<p><a class="css3button" id="demo_0"><b>Hey, give a little try!!</b></a></p>	
+						
+					</div>
+					<div class="c-2 btn">
+						<p>... but you can set options for customize your modal, just adding an array of options:</p>
+						<pre class="language-javascript" style="text-align: left;">	
+$.jMetro(
+	"... title ...",
+	"... message ...",
+	{
+		style: "error"
+	}
+);		
+						</pre>
+						<p>It will show an "ERROR" style (red window).</p><br>
+						<p><a class="css3button" id="demo_1"><b>Hey, give a little try!!</b></a></p>	
+						
+					</div>
+				</div>
+			</article>
+			
+		</div>
+	</div>		
+</body>

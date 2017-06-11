@@ -1,0 +1,198 @@
+﻿<!doctype html><head>
+	<title>jMetro Window Test</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">	
+
+	<script src="js/jquery.js"></script>	
+	<script src="../js/jmetro.js"></script>
+	<script src="js/cpret.js"></script>
+	
+	<link href="../css/jmetro.css" rel="stylesheet" />
+	<link href="css/demo.css" rel="stylesheet" />	
+	<script src="js/demo.js"></script>
+</head>
+
+<body>
+	
+	<div id="content">
+	
+		<h1><span id="demo1">X</span> j<b>M</b>etro<br>
+			<span id="description-t">A Windows 8/8.1 UI Modal Alert with jQuery<br><br>
+			<a href="#" class="css3button" id="download_0"><sub><b>Download Screen Demo</b></sub></a>
+			</span>	
+		</h1>		
+		
+		<div class="screen">			
+			<h1 id="howtobuttons" class="top-anchor"><span class="border">1</span> How did I made the MIT License Download modal? </h1>				
+			<article>			
+				<div class="c" style="text-align: left;">
+					<div class="c-2">
+					<p>Curious, aren't you?</p>
+					<p>The <a target="_blank" href="http://opensource.org/licenses/MIT">MIT License</a> Model is the one who appears when you click on the "DOWNLOAD SCREEN DEMO" button at the top. There is some
+						active features on it, like a box-style text panel and a "I understand" checkbox.
+						And now I'll show you how to make the same.</p>
+					<p>1. <b>textcolor: 'white'</b>, for put the text in a white color, well.</p>
+					<p>2. <b>bgcolor: 'rgb(23, 123, 175)'</b>, for change the background color. You can use it instead of "style" option,
+						if you wish.</p>
+					<p>3. <b>textalign: 'left'</b>, because the default is "center".</p>
+					<p>4. <b>textborder: 'white'</b>, for make a box-style. The default for it is "none".</p>
+					<p>5. <b>close: true</b>, for show the Close button on the top right of the modal.</p>
+					<p>6. <b>height: 350</b>, since the 200px default isn't enough for a good reading.</p>
+					<p>7. <b>gradient: {from,to}</b>, just because simple gradients with slight alphas are beautiful.</p>
+					<p>8. <b>check: "I understood, can I download now?"</b>, the most important line. That code line put an checkbox with
+					its relative label. No button would work while that checkbox isn't active.</p>
+					</div>
+					<div class="c-2">
+						<p>I wouldn't put all the text here, because it's giant... and, for security reasons, I wouldn't put
+						the full link of the zipped plugin. Feel free for to change anything, because... well, it's MIT License.</p>
+						<pre class="language-javascript" style="text-align: left;">	
+			$.jMetro(
+				"MIT License",
+				"The long text goes here...",
+				{
+					height: '350',
+					gradient: {
+						from: 'rgba(2,127,185,1)',
+						to: 'rgba(11,128,183,.9)'
+					},
+					textalign: 'left',
+					textcolor: 'white',
+					textborder: 'white',
+					check: "I understood, can I download now?",
+					close: true,
+					buttons: [{
+						text: "Download",
+						link: " path/to/plugin.rar",
+						target: "same"
+					}]
+				}
+			);
+						</pre>
+					</div>
+				</div>
+			</article>
+			
+			<h1 id="howtooptions" class="top-anchor"><span class="border">2</span> Options Item </h1>
+			
+			<article>	
+				<div class="c" style="text-align: left;">
+					<div class="c-2">
+						There is plenty of options that you can use, for change your <b>modal experience</b>. Some of them are default, but you can set/hide then normally.<br><br>
+						<b>1. blocker: true</b> the grey area of the "rest" of the modal. It doesn't allow the user to click on the page until he hides the modal.<br>
+						For set it off, put <i>blocker: false</i><br>
+						<b>2. fadeIn: 200</b> the speed of fade in. Default is 200ms. If you want to remove that animation, put <i>fadeIn: false</i>.<br>
+						<b>3. fadeOut: 200</b> the speed of fade in. Default is 200ms. If you want to remove that animation, put <i>fadeOut: false</i>.<br>
+						<b>4. style: "none"</b> the style of the modal. Default is "none". There is 5 styles: none, error, success, dark and white.<br>
+						<b>5. opacity: 1</b> the opacity of the modal. Default is 1.<br>
+						<b>6. height: 200</b> the height of the modal. Default is 200.<br>
+						<b>7. bgcolor: "white"</b> the color of the modal (a hexadecimal number). Setting it will override the style you choose before. Default is '#027FB9'.<br>	
+						<b>8. gradient: {top;from}</b> adds a simple top-down gradient with RGBA() and alpha support. If the browser doesn't support it, the color you put in "from" will be the default color.<br>			
+						<b>9. textalign: "center"</b> the alignment of the text area. It can be "left", "right" and "center". Default is "center".<br>		
+					</div>
+					<div class="c-2">
+						<b>10. textcolor: "white"</b> the font color of the text area. Setting it will override the style you choose before. Default is white.<br>
+						<b>11. textborder: "none"</b> the border color of the text area. Normally used for "Read This" alerts. If you don't want borders, do not set this parameter.<br>
+						<b>12. textshadow: false</b> the text shadow in the modal. Default is false (no shadow).
+								If you want to put shadow, use a hexadecimal color (<i>textshadow: #3323ee</i>). <br>
+						<b>13. shadowcolor: #000</b> the color of the <i>blocker</i>. Default is black. If you want to unable the blocker, put <i>blocker: false</i>.<br>
+						<b>14. shadowopacity: .4</b> the opacity of the <i>blocker</i>. Default is 0.4 (from 0 to 1). If you want to unable the blocker, put <i>blocker: false</i>.<br>
+						<b>15. icon: http://....</b> a link for an image, for be used as modal' icon. It resizes automatically to 32 x 32.<br>
+						<b>16. image: http://....</b> a link for an image, for be used as modal' background. That image will repeat infinitely.<br>
+						<b>17. check: "Are you sure?"</b> a checkbox to be used as a alert confirm. Normally used in "Read This" alerts.
+							While the user doesn't check the box, the modal wouldn't disappear, and an common alert will pop-up. Use it with the "close" button.<br>
+						<b>18. close: false</b> creates a close button on the top right of the modal. Clicking on it would hide it, like a "cancel", but without firing any event.<br>
+					</div>
+				</div>
+			</article>	
+					
+			
+			<h1 id="samples" class="top-anchor"><span class="border">3</span> More samples </h1>
+			
+			<article>			
+				<div class="c" style="text-align: left;">
+					<div class="c-2">
+						<p>This sample show how to create a custom alert, including a new blocker color.</p>
+						<pre class="language-javascript" style="text-align: left;">	
+$.jMetro(
+	"Alert!",
+	"Something is wrong... insert error here.",
+	{
+		icon: 'http://goo.gl/aQJHgu',
+		style: "error",
+		shadowcolor: '#850000'
+	}
+);		
+						</pre>
+						<p><a class="css3button" id="demo_2"><b>Hey, give a little try!!</b></a></p><br>	
+						<p>This sample just hide the blocker. =/</p>
+						<pre class="language-javascript" style="text-align: left;">	
+$.jMetro(
+	"Hey blocker!", "Where are ya?.",
+	{
+		blocker: false
+	}
+);		
+						</pre>
+						<p><a class="css3button" id="demo_3"><b>Hey, give a little try!!</b></a></p>
+
+						<p>Now, an <b>interactive'</b> one! Put a link for an image and an icon.</p><br>
+						<pre class="language-javascript">
+$.jMetro(
+	"Hey, COOL!!",
+	"You changed your background and put a cool icon. Now, try to resize your window and <b>see the magic</b>!",
+	{
+		icon: 'images/win8b.jpg',
+		image: 'images/win8.png'
+	}
+);
+						</pre>	
+							<input type="text" id="t_icon" value="images/win8.png"></input> Link for the icon (max: 32 x 32)<br>
+							<input type="text" id="t_image" value="images/win8b.jpg"></input> Link for the image<br>
+							<p><a class="css3button" id="demo_6"><b>Let's see what happens!</b></a></p><br>	
+						
+					</div>
+					<div class="c-2">
+						<p>Bit complex: how to create a "Yes or No" modal, showing another jMetro depending on the selected button.</p>
+						<pre class="language-javascript" style="text-align: left;">	
+$.jMetro(
+	"You need to choose!",
+	"Someone wants to eat a piece of cake. Do you allow it?",
+	{
+		buttons: [{
+			text: "YES",
+			click: function(){
+				$.jMetro(
+					"Nham nham nham",
+					"He ate the cake, and he liked it~",
+					{
+						style: "success",
+						shadowcolor: '#3a6f00'
+					}
+				);		
+			}		
+		},{
+			text: "NO",
+			click: function(){
+				$.jMetro(
+					"OMG WHY",
+					"I wanted that cake so bad DXX",
+					{
+						style: "error",
+						shadowcolor: '#850000'
+					}
+				);			
+			}		
+		}]
+	}
+);		
+						</pre>
+						<p><a class="css3button" id="demo_4"><b>Hey, give a little try!!</b></a></p>	
+					</div>
+				</div>				
+				
+			</article>
+		</div>	
+		
+		<footer>
+			For more jQuery plugins access <a href="http://fgravina.com/plugins/">http://fgravina.com/plugins/</a>
+		</footer>	
+</body>
